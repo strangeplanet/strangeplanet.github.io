@@ -531,6 +531,7 @@ function login() {
 		localStorage.removeItem('username')
 		document.getElementById('login-input').value = ''
 		document.getElementById('login-button').style.backgroundImage = "url('/images/login-button.png')"
+		location.reload()
 	} else {
 		let username = document.getElementById('login-input').value
 		if (window.hive_keychain) {
@@ -539,13 +540,12 @@ function login() {
 					console.log(username + ' login error')
 				} else {
 					localStorage.setItem('username', username)
-					
+					location.reload()
 					// document.getElementById('login-button').style.backgroundImage = "url('/images/logout-button.png')"
 				}
 			})
 		}
 	}
-	location.reload() // ??
 }
 
 function test() {
