@@ -1,0 +1,313 @@
+#main-div {
+	width: 800px;
+	height: 600px;
+	border: 1px solid black;
+	background-color: none;
+	position: relative;
+}
+
+#left-panel {
+	border: 1px solid black;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#main-panel {
+	border: 1px solid black;
+	background-color: none;
+	position: absolute;
+	width: 540px;
+	height: 450px;
+	left: 130px;
+	top: 0px;
+}
+
+#login-panel {
+	border: 1px solid black;
+	background-color: none;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#char-panel {
+	border: 1px solid black;
+	background-color: none;
+	position: absolute;
+	right: 0px;
+	top: 54px;
+	width: 126px;
+	height: 396px;
+}
+
+#char-list {
+	border: 1px solid black;
+	background-color: none;
+	max-height: 333px;
+}
+
+#char-display {
+	visibility: hidden;
+	border: 1px solid black;
+	background-color: white;
+	position: absolute;
+	right: 128px;
+	top: -54px;
+	width: 120px;
+	max-height: 448px;
+	font-family: monospace;
+	font-size: 12px;
+	overflow: auto;
+}
+
+button {
+	margin: 4px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: white;
+}
+
+button:disabled {
+	background-color: gray;
+	cursor: not-allowed;
+}
+
+.lbutton {
+	display: block;
+	width: 120px;
+    height: 30px;
+}
+
+.abutton {
+	display: block;
+	width: 120px;
+    height: 30px;
+	animation-name: buttonpress;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+}
+
+.portal-button {
+	display: inline-grid;
+	width: 100px;
+	height: 100px;
+	/* position: relative; */
+}
+
+.skill-button {
+	display: inline-grid;
+	width: 70px;
+	height: 70px;
+	color: black;
+}
+
+/* a */
+/* a:visited { ... } */
+/* a:focus { ... } */
+/* a:hover { ... } */
+/* a:active { ... } */
+
+@keyframes buttonpress {
+  0%   {background-color: #85B2DF;}
+  14%  {background-color: #DF85DF;}
+  29%  {background-color: #DF85B2;}
+  43%  {background-color: #DF8585;}
+  57%  {background-color: #DFB285;}
+  71%  {background-color: #DFDF85;}
+  86%  {background-color: #B2DF85;}
+  100% {background-color: #85B2DF;}
+}
+
+button:hover, #show-hide:hover {
+	background-color: #85B2DF;
+}
+
+button:active, #show-hide:active {
+	animation-name: buttonpress;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+#main-button {
+	background-image: url('/images/main-button.png');
+}
+
+#char-button {
+	background-image: url('/images/chars-button.png');
+}
+
+#char-button2 {
+	background-image: url('/images/chars-button.png');
+	display: block;
+	width: 120px;
+    height: 30px;
+	margin-top: 3px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#inventory-button {
+	background-image: url('/images/inventory-button.png');
+}
+
+#settings-button {
+	background-image: url('/images/settings-button.png');
+}
+
+#newaccount-button {
+	background-image: url('/images/newaccount-button.png');
+}
+
+#reset-button {
+	background-image: url('/images/reset-button.png');
+	disabled: true;
+}
+
+#login-button {
+	background-image: url('/images/login-button.png');
+	width: 80px;
+	height: 20px;
+	left: 38px;
+	position: relative;
+	display: block;
+}
+
+#create-button {
+	background-image: url('/images/create-button.png');
+	width: 80px;
+	height: 20px;
+	position: relative;
+	display: block;
+}
+
+#name-input {
+	font-family: monospace;
+	width: 124px;
+	margin: 4px;
+	display: block;
+}
+
+#login-input {
+	font-size: 12px;
+	font-family: monospace;
+	width: 110px;
+	margin: 4px;
+	display: block;
+}
+
+#trees-button {
+	background-image: url('/images/tree-portal.png');
+}
+
+#rocks-button {
+	background-image: url('/images/rock-portal.png');
+}
+
+#spiders-button {
+	background-image: url('/images/spider-portal.png');
+}
+
+.invitem {
+	display: inline-grid;
+	margin: 4px;
+	width: 50px;
+	height: 65px;
+	border: 1px solid black;
+	background-position: top;
+	background-repeat: no-repeat;
+	font-size: 13px;
+	font-family: monospace;
+}
+
+.invitem:hover {
+	/* cursor: url('/images/cursor.png'), pointer; */
+	cursor: pointer;
+}
+
+#invq {
+	display: block;
+	position: relative;
+	vertical-align: bottom;
+	top: 79%;
+	text-align: center;
+	background-color: none;
+}
+
+.char-box {
+	display: block;
+	width: 118px;
+	border: 1px solid black;
+	margin: 2px;
+}
+
+#char-prev {
+	background-image: url('/images/charprev-button.png');
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	margin: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	left: 0px;
+}
+
+#char-next {
+	background-image: url('/images/charnext-button.png');
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	margin: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	right: 0px;
+}
+
+#char-attr {
+	display: block;
+	font-size: 14px;
+	font-family: monospace;
+}
+
+#show-hide {
+	appearance: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-image: url('/images/show-button.png');
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	margin: 3px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	left: 35px;
+}
+
+#show-hide:checked {
+	background-image: url('/images/hide-button.png');
+}
+
+#cdt {
+	display: block;
+	
+}
+
+/* #test-textarea { */
+	/* position: absolute; */
+	/* bottom: 0; */
+	/* left: 0; */
+	/* width: 600px; */
+	/* margin: 4px; */
+	/* height: 150px; */
+	/* outline: none; */
+	/* resize: none; */
+	/* overflow: auto; */
+	/* background-color: white; */
+	/* color: black; */
+	/* font-size: 14px; */
+/* } */
